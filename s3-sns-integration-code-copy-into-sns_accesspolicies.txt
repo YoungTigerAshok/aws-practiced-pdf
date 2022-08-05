@@ -1,0 +1,30 @@
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__default_statement_ID",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "SNS:GetTopicAttributes",
+        "SNS:SetTopicAttributes",
+        "SNS:AddPermission",
+        "SNS:RemovePermission",
+        "SNS:DeleteTopic",
+        "SNS:Subscribe",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:Publish",
+        "SNS:Receive"
+      ],
+      "Resource": "arn:aws:sns:us-east-2:674018343005:delets3sns", /////// SNS ARN
+      "Condition": {
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:s3:::kkkkkkkkkkuuuuuuuuuuuuuuuuu777777777ikkkkkkkkkkkkkkkkkk" /// S3 ARN
+        }
+      }
+    }
+  ]
+}
